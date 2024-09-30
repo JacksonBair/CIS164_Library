@@ -1,0 +1,76 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "CIS164_Library",
+					"jsonFile" : "directory-CIS164_Library-Debug-44fa108e8057b48db928.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "CIS164_Library",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "CIS164_Library",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "CIS164_Library::@aceab10286dbb2f12520",
+					"jsonFile" : "target-CIS164_Library-Debug-9ded380ccacf965ca5ff.json",
+					"name" : "CIS164_Library",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library/out/build/x64-debug",
+		"source" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
