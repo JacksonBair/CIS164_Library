@@ -55,7 +55,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "CIS164_Library::@aceab10286dbb2f12520",
-					"jsonFile" : "target-CIS164_Library-Debug-9ded380ccacf965ca5ff.json",
+					"jsonFile" : "target-CIS164_Library-Debug-3cbaec15d13c807dcd7f.json",
 					"name" : "CIS164_Library",
 					"projectIndex" : 0
 				}
@@ -65,8 +65,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library/out/build/x64-debug",
-		"source" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library"
+		"build" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/CIS164_Library/CIS164_Library/out/build/x64-debug",
+		"source" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/CIS164_Library/CIS164_Library"
 	},
 	"version" : 
 	{

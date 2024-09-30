@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library/out/build/x64-debug"
+			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/CIS164_Library/CIS164_Library/out/build/x64-debug"
 		},
 		{
 			"name" : "CIS164_Library_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library"
+			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/CIS164_Library/CIS164_Library"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -75,7 +75,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library/out/build/x64-debug"
+			"value" : "c:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/CIS164_Library/CIS164_Library/out/build/x64-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -159,11 +159,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "STRING",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe"
+			"value" : "cl.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -271,11 +271,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "STRING",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe"
+			"value" : "cl.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library/out/build/x64-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/CIS164_Library/CIS164_Library/out/build/x64-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -563,7 +563,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library"
+			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/CIS164_Library/CIS164_Library"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/FirstProject/CIS164_Library/CIS164_Library/out/install/x64-debug"
+			"value" : "C:/Users/jacks/Documents/DMACCProgramming/Fall2024/advancedC++/CIS164_Library/CIS164_Library/out/install/x64-debug"
 		},
 		{
 			"name" : "CMAKE_LINKER",
