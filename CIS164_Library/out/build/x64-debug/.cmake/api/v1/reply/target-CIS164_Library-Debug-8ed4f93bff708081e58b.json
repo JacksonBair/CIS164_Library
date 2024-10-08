@@ -108,7 +108,8 @@
 			"sourceIndexes" : 
 			[
 				1,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -140,6 +141,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "CIS164_Library/Book.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "CIS164_Library/Shelf.h",
 			"sourceGroupIndex" : 1
 		}
 	],
