@@ -14,6 +14,7 @@ private:
 	string publicationDate;
 	string genre;
 public:
+	Book();
 	Book(string title, string author, string publisher, string isbn, string publicationDate, string genre);
 
 	string getTitle() { return title; }

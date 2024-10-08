@@ -2,11 +2,16 @@
 //
 
 #include "CIS164_Library.h"
+#include "Shelf.h"
+#include "Shelf.cpp"
+#include "Book.h"
+#include "Book.cpp"
+
 
 using namespace std;
 
 int main()
 {
-	cout << "Hello CMake." << endl;
-	return 0;
+	Book book1();
+
 }
