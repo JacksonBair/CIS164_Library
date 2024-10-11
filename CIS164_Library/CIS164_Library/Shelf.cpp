@@ -1,6 +1,7 @@
 // Shelf Object
 
-#include "shelf.h"
+#include "Shelf.h"
+#include "Book.h"
 
 
 // Constructors
@@ -19,14 +20,14 @@ Shelf::Shelf(string shelfName, string shelfGenre) {
 string Shelf::GetShelfName() const {
     return this->shelfName;
 }
-void Shelf::SetShelfName(string shelfName) const {
+void Shelf::SetShelfName(string shelfName) {
     this->shelfName = shelfName;
 }
 
 string Shelf::GetShelfGenre() const {
     return this->shelfGenre;
 }
-void Shelf::SetShelfGenre(string shelfGenre) const {
+void Shelf::SetShelfGenre(string shelfGenre) {
     this->shelfGenre = shelfGenre;
 }
 
@@ -34,4 +35,18 @@ void Shelf::SetShelfGenre(string shelfGenre) const {
 // Methods
 void Shelf::AddBook(Book newBook) {
     shelfBooks.push_back(newBook);
+}
+
+string Shelf::DisplayBooks() {
+    string books;
+
+    for (int i = 0; i < shelfBooks.size(); i++) {
+        if (i < shelfBooks.size() - 1) {
+            books += shelfBooks[i].getTitle() + ", ";
+        } else {
+            books += shelfBooks[i].getTitle();
+        }
+    }
+
+    return books;
 }

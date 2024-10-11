@@ -15,7 +15,7 @@ class Shelf {
         string shelfName;
         string shelfGenre;
 
-        vector<Book> shelfBooks; // book class needs implementation
+        vector<Book> shelfBooks;
 
     public:
         Shelf();
@@ -28,6 +28,7 @@ class Shelf {
         void SetShelfGenre(string shelfGenre);
 
         void AddBook(Book newBook);
+        string DisplayBooks();
 };
 
 #endif // SHELF_H
