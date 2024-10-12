@@ -4,5 +4,8 @@
 #pragma once
 
 #include <iostream>
+#include "Book.h"
+#include "Shelf.h"
+
 
 // TODO: Reference additional headers your program requires here.

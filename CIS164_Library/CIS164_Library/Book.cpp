@@ -3,7 +3,8 @@
 
 // Constructors
 
-Book::Book() {
+Book::Book()
+{
 	setTitle("NoTitle");
 	setAuthor("NoAuthor");
 	setPublisher("NoPublisher");
@@ -12,7 +13,8 @@ Book::Book() {
 	setGenre("NoGenre");
 }
 
-Book::Book(string title, string author, string publisher, string isbn, string publicationDate, string genre) {
+Book::Book(string title, string author, string publisher, string isbn, string publicationDate, string genre)
+{
 	setTitle(title);
 	setAuthor(author);
 	setPublisher(publisher);
