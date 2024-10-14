@@ -33,4 +33,4 @@ public:
 };
 
 
-#endif BOOK_H
+#endif //BOOK_H

@@ -3,19 +3,16 @@
 
 #include "CIS164_Library.h"
 #include "Shelf.h"
-#include "Shelf.cpp"
 #include "Book.h"
-#include "Book.cpp"
+
 
 using namespace std;
 
 int main()
 {
-	Book book1();
-
 	cout << "Hello CMake." << endl;
 
-	Book book1 = Book("Title", "Author", "Publisher", "ISBN", "PubDate", "Genre");
+	Book book1("Pog", "Author", "Publisher", "ISBN", "PubDate", "Genre");
 
 	Shelf shelf1("Name", "Genre");
 
