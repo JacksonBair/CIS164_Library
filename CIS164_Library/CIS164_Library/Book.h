@@ -17,20 +17,19 @@ public:
 	Book();
 	Book(string title, string author, string publisher, string isbn, string publicationDate, string genre);
 
-	string getTitle() { return title; }
-	string getAuthor() { return author; }
-	string getPublisher() { return publisher; }
-	string getIsbn() { return isbn; }
-	string getPublicationDate() { return publicationDate; }
-	string getGenre() { return genre; }
+	string getTitle() const;
+	string getAuthor() const;
+	string getPublisher() const;
+	string getIsbn() const;
+	string getPublicationDate() const;
+	string getGenre() const;
 
-	void setTitle(string newTitle) { title = newTitle; }
-	void setAuthor(string newAuthor) { author = newAuthor; }
-	void setPublisher(string newPublisher) { publisher = newPublisher; }
-	void setIsbn(string newIsbn) { isbn = newIsbn; }
-	void setPublicationDate(string newPublicationDate) { publicationDate = newPublicationDate; }
-	void setGenre(string newGenre) { genre = newGenre; }
-
+	void setTitle(string title);
+	void setAuthor(string Author);
+	void setPublisher(string Publisher);
+	void setIsbn(string Isbn);
+	void setPublicationDate(string PublicationDate);
+	void setGenre(string Genre); 
 };
 
 
