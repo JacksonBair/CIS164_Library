@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// adds a book object to library object
+// adds a book object
 void userAddBook(Library library) {
 	string author;
 	string title;
@@ -103,14 +103,101 @@ void viewShelf(Library& library) {
 	cout << "What shelf are you looking for?\n1. Drama\n2. Action\n3. Adventure\n4. Romance\n5. NonFiction\n6. Fantasy";
 }
 
-void userCheckoutBook(Library library) {
 
+// User inputs book ISBN to set books as checked out
+void userCheckoutBook(Library& library) {
+
+	bool bookFound = false;
 	string inputISBN;
+	vector<Shelf>& shelves = library.getShelves();
+	
 
-	//cout <<
+	Book* foundBook;
+
+	cout << "What is the ISBN of the book being checked out?" << endl
+		<< "Input ISBN: ";
+
+	cin >> inputISBN;
+
+	for (int i = 0; i < shelves.size(); i++) {
+		if (bookFound) {
+			break;
+		}
+
+		vector<Book>& currentShelf = shelves[i].GetBooks();
+
+		for (int j = 0; j < currentShelf.size(); j++) {
+
+			Book& currentBook = currentShelf[j];
+
+			if (inputISBN == currentBook.getIsbn()) {
+				foundBook = &currentBook;
+				bookFound = true;
+				break;
+			}
+		}
+	}
+
+	if (!bookFound) {
+		cout << endl << "Sorry! Book could not be found." << endl;
+	} else if (foundBook->getIsCheckedOut()) {
+		cout << endl << "Sorry! That book is already checked out." << endl;
+	} else if (!foundBook->getIsCheckedOut()) {
+		cout << endl << "Checking out the book: " << foundBook->getTitle() << endl;
+		foundBook->setIsCheckedOut(true);
+	}
 
 }
 
+
+// User inputs book ISBN to set books as returned
+// Not a big fan of just copypasting the same code around but I don't have time
+void userReturnBook(Library& library) {
+
+	bool bookFound = false;
+	string inputISBN;
+	vector<Shelf>& shelves = library.getShelves();
+
+
+	Book* foundBook;
+
+	cout << "What is the ISBN of the book being returned?" << endl
+		<< "Input ISBN: ";
+
+	cin >> inputISBN;
+
+	for (int i = 0; i < shelves.size(); i++) {
+		if (bookFound) {
+			break;
+		}
+
+		vector<Book>& currentShelf = shelves[i].GetBooks();
+
+		for (int j = 0; j < currentShelf.size(); j++) {
+
+			Book& currentBook = currentShelf[j];
+
+			if (inputISBN == currentBook.getIsbn()) {
+				foundBook = &currentBook;
+				bookFound = true;
+				break;
+			}
+		}
+	}
+
+	if (!bookFound) {
+		cout << endl << "Sorry! Book could not be found." << endl;
+	} else if (!foundBook->getIsCheckedOut()) {
+		cout << endl << "Sorry! That book is already here." << endl;
+	} else if (foundBook->getIsCheckedOut()) {
+		cout << endl << "Returning the book: " << foundBook->getTitle() << endl;
+		foundBook->setIsCheckedOut(false);
+	}
+
+}
+
+
+// Finds a book and the shelf it's on by using user input of ISBN
 void userFindBook(Library& library) {
 
 	bool bookFound = false;
@@ -143,7 +230,7 @@ void userFindBook(Library& library) {
 	}
 
 	if (!bookFound) {
-		cout << "Book with ISBN: " << inputISBN << " could not be found" << endl;
+		cout << endl << "Book with ISBN: " << inputISBN << " could not be found" << endl;
 	}
 
 }
@@ -223,16 +310,16 @@ int main()
 
 
 	// Library Program's text menu
-	cout << "Welcome to the Digital Library Service" << endl << endl;
+	cout << "Welcome to the Digital Library Service" << endl;
 
 	while (userInput != LAST_OPTION) {
 
-		cout << "What would you like to do?" << endl
+		cout << endl << "What would you like to do?" << endl
 			<< "1. Checkout a book" << endl
 			<< "2. Return a book" << endl
 			<< "3. Find a book" << endl
-			<< "4. Add a book" << endl
-			<< "5. Remove a book" << endl
+			<< "4. Add a book (Not implemented)" << endl
+			<< "5. Remove a book (Not implemented)" << endl
 			<< "6. Quit Program" << endl;
 
 
@@ -248,11 +335,11 @@ int main()
 
 		switch (userInput) {
 			case 1:
-				// userCheckoutBook();
+				userCheckoutBook(DMACC);
 				break;
 
 			case 2:
-				// userReturnBook();
+				userReturnBook(DMACC);
 			   break;
 
 			case 3:
@@ -260,7 +347,7 @@ int main()
 				break;
 
 			case 4:
-				userAddBook(DMACC);
+				// userAddBook(DMACC);
 				break;
 
 			case 5:
