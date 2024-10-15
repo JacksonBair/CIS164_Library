@@ -35,6 +35,8 @@ void Shelf::SetShelfGenre(string shelfGenre) {
 // Methods
 void Shelf::AddBook(Book newBook) {
     shelfBooks.push_back(newBook);
+
+    cout << "Added " << newBook.getTitle() << endl;
 }
 
 string Shelf::DisplayBooks() {
@@ -49,4 +51,8 @@ string Shelf::DisplayBooks() {
     }
 
     return books;
+}
+
+vector<Book>& Shelf::GetBooks() {
+    return this->shelfBooks;
 }
