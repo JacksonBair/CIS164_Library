@@ -13,6 +13,7 @@ private:
 	string isbn;
 	string publicationDate;
 	string genre;
+	bool isCheckedOut;
 public:
 	Book();
 	Book(string title, string author, string publisher, string isbn, string publicationDate, string genre);
@@ -23,6 +24,7 @@ public:
 	string getIsbn() const;
 	string getPublicationDate() const;
 	string getGenre() const;
+	bool getIsCheckedOut() const;
 
 	void setTitle(string title);
 	void setAuthor(string Author);
@@ -30,6 +32,7 @@ public:
 	void setIsbn(string Isbn);
 	void setPublicationDate(string PublicationDate);
 	void setGenre(string Genre); 
+	void setIsCheckedOut(bool isCheckedOut);
 };
 
 

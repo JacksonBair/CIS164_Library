@@ -11,6 +11,7 @@ Book::Book()
 	setIsbn("NoIsbn");
 	setPublicationDate("NoPublicationDate");
 	setGenre("NoGenre");
+	setIsCheckedOut(false);
 }
 
 Book::Book(string title, string author, string publisher, string isbn, string publicationDate, string genre)
@@ -21,6 +22,7 @@ Book::Book(string title, string author, string publisher, string isbn, string pu
 	setIsbn(isbn);
 	setPublicationDate(publicationDate);
 	setGenre(genre);
+	setIsCheckedOut(false);
 }
 
 
@@ -44,6 +46,9 @@ string Book::getPublicationDate() const {
 string Book::getGenre() const {
 	return this->genre;
 }
+bool Book::getIsCheckedOut() const {
+	return this->isCheckedOut;
+}
 
 void Book::setAuthor(string author) {
 	this->author = author;
@@ -62,6 +67,9 @@ void Book::setPublicationDate(string publicationDate) {
 }
 void Book::setGenre(string genre) {
 	this->genre = genre;
+}
+void Book::setIsCheckedOut(bool isCheckedOut) {
+	this->isCheckedOut = isCheckedOut;
 }
 
 //Methods

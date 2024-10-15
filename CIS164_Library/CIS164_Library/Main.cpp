@@ -151,7 +151,9 @@ int main()
 
 
 	cout << DMACC.displayShelves() << endl;
-	cout << Fantasy.DisplayBooks();
+	cout << Fantasy.DisplayBooks() << endl;
+	cout << book15.getTitle() << ", " << boolalpha << "is checked out: " << book15.getIsCheckedOut();
+
 
 
 	/*cout << book.getTitle() << endl;
