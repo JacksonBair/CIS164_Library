@@ -77,7 +77,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 build cmake_object_order_depends_target_CIS164_Library: phony || .
 
-build CIS164_Library\CMakeFiles\CIS164_Library.dir\CIS164_Library.cpp.obj: CXX_COMPILER__CIS164_Library_unscanned_Debug C$:\Users\jacks\Documents\DMACCProgramming\Fall2024\advancedC++\CIS164_Library\CIS164_Library\CIS164_Library\CIS164_Library.cpp || cmake_object_order_depends_target_CIS164_Library
+build CIS164_Library\CMakeFiles\CIS164_Library.dir\Main.cpp.obj: CXX_COMPILER__CIS164_Library_unscanned_Debug C$:\Users\jacks\Documents\DMACCProgramming\Fall2024\advancedC++\CIS164_Library\CIS164_Library\CIS164_Library\Main.cpp || cmake_object_order_depends_target_CIS164_Library
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
   OBJECT_DIR = CIS164_Library\CMakeFiles\CIS164_Library.dir
   OBJECT_FILE_DIR = CIS164_Library\CMakeFiles\CIS164_Library.dir
@@ -98,6 +98,13 @@ build CIS164_Library\CMakeFiles\CIS164_Library.dir\Shelf.cpp.obj: CXX_COMPILER__
   TARGET_COMPILE_PDB = CIS164_Library\CMakeFiles\CIS164_Library.dir\
   TARGET_PDB = CIS164_Library\CIS164_Library.pdb
 
+build CIS164_Library\CMakeFiles\CIS164_Library.dir\Library.cpp.obj: CXX_COMPILER__CIS164_Library_unscanned_Debug C$:\Users\jacks\Documents\DMACCProgramming\Fall2024\advancedC++\CIS164_Library\CIS164_Library\CIS164_Library\Library.cpp || cmake_object_order_depends_target_CIS164_Library
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
+  OBJECT_DIR = CIS164_Library\CMakeFiles\CIS164_Library.dir
+  OBJECT_FILE_DIR = CIS164_Library\CMakeFiles\CIS164_Library.dir
+  TARGET_COMPILE_PDB = CIS164_Library\CMakeFiles\CIS164_Library.dir\
+  TARGET_PDB = CIS164_Library\CIS164_Library.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CIS164_Library
@@ -106,7 +113,7 @@ build CIS164_Library\CMakeFiles\CIS164_Library.dir\Shelf.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable CIS164_Library\CIS164_Library.exe
 
-build CIS164_Library\CIS164_Library.exe: CXX_EXECUTABLE_LINKER__CIS164_Library_Debug CIS164_Library\CMakeFiles\CIS164_Library.dir\CIS164_Library.cpp.obj CIS164_Library\CMakeFiles\CIS164_Library.dir\Book.cpp.obj CIS164_Library\CMakeFiles\CIS164_Library.dir\Shelf.cpp.obj
+build CIS164_Library\CIS164_Library.exe: CXX_EXECUTABLE_LINKER__CIS164_Library_Debug CIS164_Library\CMakeFiles\CIS164_Library.dir\Main.cpp.obj CIS164_Library\CMakeFiles\CIS164_Library.dir\Book.cpp.obj CIS164_Library\CMakeFiles\CIS164_Library.dir\Shelf.cpp.obj CIS164_Library\CMakeFiles\CIS164_Library.dir\Library.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
