@@ -9,7 +9,8 @@
 
 using namespace std;
 
-void userAddBook() {
+// adds a book object to library object
+void userAddBook(Library library) {
 	string author;
 	string title;
 	string publicationDate;
@@ -90,11 +91,15 @@ void userAddBook() {
 		}
 	}
 
-	
+	/**
+	 * Add some way to input into library and shelf maybe?
+	 */
+
+
 }
 
 void viewShelf() {
-	cout << "What shelf are you looking for?\nDrama\nAction\nAdventure\nRomance\nNonFiction\nFantasy";
+	cout << "What shelf are you looking for?\n1. Drama\n2. Action\n3. Adventure\n4. Romance\n5. NonFiction\n6. Fantasy";
 }
 
 int main()
@@ -161,6 +166,68 @@ int main()
 	//cout << shelf1.GetShelfName() << endl;
 	//cout << shelf1.DisplayBooks();
 
+
+	// Main Library Program
+	const int FIRST_OPTION = 1;
+	const int LAST_OPTION = 6;
+	int userInput = 0;
+
+	cout << endl << endl; 
+
+
+	// Library Program's text menu
+	cout << "Welcome to the Digital Library Service" << endl;
+
+	while (userInput != LAST_OPTION) {
+
+		cout << "What would you like to do?" << endl
+			<< "1. Checkout a book" << endl
+			<< "2. Return a book" << endl
+			<< "3. Find a book" << endl
+			<< "4. Add a book" << endl
+			<< "5. Remove a book" << endl
+			<< "6. Quit Program" << endl;
+
+
+		// Getting user's input
+		cout << "Selection: ";
+		cin >> userInput;
+
+		while (userInput < FIRST_OPTION || userInput > LAST_OPTION) {
+			cout << "Please select a valid option (1-6)" << endl;
+			cout << "Selection: ";
+			cin >> userInput;
+		}
+
+		switch (userInput) {
+			case 1:
+				// userCheckoutBook();
+				break;
+
+			case 2:
+				// userReturnBook();
+			   break;
+
+			case 3:
+				viewShelf();
+				// userFindBook();
+				break;
+
+			case 4:
+				userAddBook(DMACC);
+				break;
+
+			case 5:
+				// userRemoveBook();
+				break;
+
+			case 6:
+				break;
+
+		}
+	}
+
+	cout << endl << "Goodbye!" << endl;
 
 	return 0;
 }
