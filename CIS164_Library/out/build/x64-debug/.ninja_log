@@ -1,12 +1,12 @@
 # ninja log v5
 8	445	7506523085139002	CIS164_Library/CMakeFiles/CIS164_Library.dir/CIS164_Library.cpp.obj	3a82abad1e88d778
-464	574	7506572062199387	CIS164_Library/CIS164_Library.exe	252bb33dcb0c32ee
-13	756	7506556763017965	CIS164_Library/CMakeFiles/CIS164_Library.dir/Shelf.cpp.obj	61d2791af0d67700
+502	593	7506574184633687	CIS164_Library/CIS164_Library.exe	252bb33dcb0c32ee
+9	469	7506574183647873	CIS164_Library/CMakeFiles/CIS164_Library.dir/Shelf.cpp.obj	61d2791af0d67700
 11	740	7506556762847848	CIS164_Library/CMakeFiles/CIS164_Library.dir/Book.cpp.obj	ee33b28781fa3a14
 1	6	0	clean	8c45b54705a541e8
-16	750	7506556762952936	CIS164_Library/CMakeFiles/CIS164_Library.dir/Library.cpp.obj	5120cdadb69ffde
-9	463	7506572061323053	CIS164_Library/CMakeFiles/CIS164_Library.dir/Main.cpp.obj	c7b426cff6e37e39
-9	469	7506574183647873	CIS164_Library/CMakeFiles/CIS164_Library.dir/Shelf.cpp.obj	61d2791af0d67700
 12	482	7506574183768434	CIS164_Library/CMakeFiles/CIS164_Library.dir/Library.cpp.obj	5120cdadb69ffde
 6	502	7506574183968721	CIS164_Library/CMakeFiles/CIS164_Library.dir/Main.cpp.obj	c7b426cff6e37e39
-502	593	7506574184633687	CIS164_Library/CIS164_Library.exe	252bb33dcb0c32ee
+12	732	7507375506055054	CIS164_Library/CMakeFiles/CIS164_Library.dir/Library.cpp.obj	5120cdadb69ffde
+9	733	7507375506055054	CIS164_Library/CMakeFiles/CIS164_Library.dir/Shelf.cpp.obj	61d2791af0d67700
+7	739	7507375506135007	CIS164_Library/CMakeFiles/CIS164_Library.dir/Main.cpp.obj	c7b426cff6e37e39
+740	916	7507375507561450	CIS164_Library/CIS164_Library.exe	252bb33dcb0c32ee
