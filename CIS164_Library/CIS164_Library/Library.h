@@ -21,6 +21,8 @@ public:
     
     void addShelf(Shelf newShelf);
     string displayShelves();
+
+    string findShelf(string genre);
 };
 
 #endif // !Library_H

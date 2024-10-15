@@ -93,16 +93,43 @@ void userAddBook() {
 	
 }
 
-void viewShelf() {
-	cout << "What shelf are you looking for?\nDrama\nAction\nAdventure\nRomance\nNonFiction\nFantasy";
+void viewShelf(Library Library) { 
+	int shelfName;
+	cout << "\nWhat shelf are you looking for?\n[1]Drama\n[2]Action\n[3]Adventure\n[4]Romance\n[5]NonFiction\n[6]Fantasy\n\nInput the number corresponding with the genre: ";
+	for (;;) {
+		cin >> shelfName;
+		if (shelfName == 1) {
+			cout << "You choose Drama\n";
+		}
+		else if (shelfName == 2) {
+			cout << "You choose Action\n";
+		}
+		else if (shelfName == 3) {
+			cout << "You choose Adventure\n";
+		}
+		else if (shelfName == 4) {
+			cout << "You choose Romance\n";
+		}
+		else if (shelfName == 5) {
+			cout << "You choose NonFiction\n";
+		}
+		else if (shelfName == 6) {
+			cout << "You choose Fantasy\n";
+			cout << Library.getLibraryName();
+		}
+		else {
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "Input must be valid. Please re-enter." << endl;
+		}
+	}
 }
 
 int main()
 {
 	cout << "Hello CMake." << endl;
-
+	// Initialization
 	Library DMACC("DMACC");
-
 	Shelf Drama("A1", "Drama");
 	DMACC.addShelf(Drama);
 	Shelf Action("A2", "Action");
@@ -115,7 +142,6 @@ int main()
 	DMACC.addShelf(NonFiction);
 	Shelf Fantasy("B3", "Fantasy");
 	DMACC.addShelf(Fantasy);
-
 	Book book1("Shadows in the Mist", "Amara Wilde", "Foggy Pines Publishing", "0001HD", "01/2023", "Drama");
 	Drama.AddBook(book1);
 	Book book2("The Last Ember", "Cyrus Black", "Firelight Press", "0002PC", "03/2022", "Fantasy");
@@ -150,9 +176,9 @@ int main()
 	Adventure.AddBook(book16);
 
 
-	cout << DMACC.displayShelves() << endl;
-	cout << Fantasy.DisplayBooks() << endl;
-	cout << book15.getTitle() << ", " << boolalpha << "is checked out: " << book15.getIsCheckedOut();
+	//cout << DMACC.displayShelves() << endl;
+	//cout << Fantasy.DisplayBooks() << endl;
+	//cout << book15.getTitle() << ", " << boolalpha << "is checked out: " << book15.getIsCheckedOut();
 
 
 
@@ -161,6 +187,6 @@ int main()
 	//cout << shelf1.GetShelfName() << endl;
 	//cout << shelf1.DisplayBooks();
 
-
+	viewShelf(DMACC);
 	return 0;
 }

@@ -22,14 +22,17 @@ void Library::addShelf(Shelf newShelf) {
 }
 
 string Library::displayShelves() {
-    string books;
+    string shelf;
         for (int i = 0; i < shelves.size(); i++) {
             if (i < shelves.size() - 1) {
-                books += shelves[i].GetShelfGenre() + ", ";
+                shelf += shelves[i].GetShelfGenre() + ", ";
             }
             else {
-                books += shelves[i].GetShelfGenre();
+                shelf += shelves[i].GetShelfGenre();
             }
         }
-    return books;
+    return shelf;
+}
+
+string Library::findShelf(string genres) {
 }
