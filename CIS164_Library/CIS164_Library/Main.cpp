@@ -98,8 +98,54 @@ void userAddBook(Library library) {
 
 }
 
-void viewShelf() {
+void viewShelf(Library& library) {
+
 	cout << "What shelf are you looking for?\n1. Drama\n2. Action\n3. Adventure\n4. Romance\n5. NonFiction\n6. Fantasy";
+}
+
+void userCheckoutBook(Library library) {
+
+	string inputISBN;
+
+	//cout <<
+
+}
+
+void userFindBook(Library& library) {
+
+	bool bookFound = false;
+	string inputISBN;
+	vector<Shelf> shelves = library.getShelves();
+	vector<Book> currentShelf;
+	Book currentBook;
+
+	cout << "What is the ISBN of the book?" << endl;
+
+	cin >> inputISBN;
+
+	for (int i = 0; i < shelves.size(); i++) {
+		if (bookFound) {
+			break;
+		}
+
+		currentShelf = shelves[i].GetBooks();
+		
+		for (int j = 0; j < currentShelf.size(); j++) {
+
+			currentBook = currentShelf[j];
+			
+			if (inputISBN == currentBook.getIsbn()) {
+				cout << "Found it! The book: " << currentBook.getTitle() << ", with ISBN: " << inputISBN << " is at shelf " << shelves[i].GetShelfName() << endl;
+				bookFound = true;
+				break;
+			}
+		}
+	}
+
+	if (!bookFound) {
+		cout << "Book with ISBN: " << inputISBN << " could not be found" << endl;
+	}
+
 }
 
 int main()
@@ -122,37 +168,37 @@ int main()
 	DMACC.addShelf(Fantasy);
 
 	Book book1("Shadows in the Mist", "Amara Wilde", "Foggy Pines Publishing", "0001HD", "01/2023", "Drama");
-	Drama.AddBook(book1);
+	DMACC.getShelves()[0].AddBook(book1);
 	Book book2("The Last Ember", "Cyrus Black", "Firelight Press", "0002PC", "03/2022", "Fantasy");
-	Fantasy.AddBook(book2);
+	DMACC.getShelves()[5].AddBook(book2);
 	Book book3("Echoes of Tomorrow", "Sienna Grey", "Futurist Books", "0003UE", "11/2021", "Drama");
-	Drama.AddBook(book3);
+	DMACC.getShelves()[0].AddBook(book3);
 	Book book4("Threads of Fate", "Elena Moon", "Weaver's Tale Publishing", "0004LO", "07/2020", "Romance");
-	Romance.AddBook(book4);
+	DMACC.getShelves()[3].AddBook(book4);
 	Book book5("The Silent City", "Harper Lane", "Urban Myth Publishing", "0005PD", "09/2023", "Action");
-	Action.AddBook(book5);
+	DMACC.getShelves()[1].AddBook(book5);
 	Book book6("Beneath the Stars", "Nina Rivers", "Celestial Reads", "0006US", "12/2020", "Romance");
-	Romance.AddBook(book6);
+	DMACC.getShelves()[3].AddBook(book6);
 	Book book7("Reflections in Time", "Jasper North", "Timeless Press", "0007AJ", "04/2022", "NonFiction");
-	NonFiction.AddBook(book7);
+	DMACC.getShelves()[4].AddBook(book7);
 	Book book8("The Color of Secrets", "Marissa Bloom", "Whispering Pines Books", "0008NK", "06/2021", "Drama");
-	Drama.AddBook(book8);
+	DMACC.getShelves()[0].AddBook(book8);
 	Book book9("Rise of the Guardians", "Theo Knight", "Epic Ventures Publishing", "0009PH", "05/2024", "Adventure");
-	Adventure.AddBook(book9);
+	DMACC.getShelves()[2].AddBook(book9);
 	Book book10("The Hidden Path", "Anya Stone", "Mystic Road Press", "0010AK", "10/2021", "Adventure");
-	Adventure.AddBook(book10);
+	DMACC.getShelves()[2].AddBook(book10);
 	Book book11("Voices from the Deep", "Lucas Tide", "Ocean's Echo Publishing", "0011HJ", "02/2023", "Action");
-	Action.AddBook(book11);
+	DMACC.getShelves()[1].AddBook(book11);
 	Book book12("Chasing the Horizon", "Riley Hunter", "Wanderlust Books", "0012KH", "08/2022", "NonFiction");
-	NonFiction.AddBook(book12);
+	DMACC.getShelves()[4].AddBook(book12);
 	Book book13("Fires of Change", "Sophie Ember", "Transformative Press", "0013PY", "01/2024", "NonFiction");
-	NonFiction.AddBook(book13);
+	DMACC.getShelves()[4].AddBook(book13);
 	Book book14("Dancing with Shadows", "Kira Lark", "Twilight Press", "0014KG", "03/2020", "Fantasy");
-	Fantasy.AddBook(book14);
+	DMACC.getShelves()[5].AddBook(book14);
 	Book book15("The Last Heir", "Dylan Sage", "Legacy Publishers", "0015LK", "11/2022", "Fantasy");
-	Fantasy.AddBook(book15);
+	DMACC.getShelves()[5].AddBook(book15);
 	Book book16("Between Worlds", "Ivy Vale", "Parallel Universe Press", "0016IJ", "06/2023", "Adventure");
-	Adventure.AddBook(book16);
+	DMACC.getShelves()[2].AddBook(book16);
 
 
 	cout << DMACC.displayShelves() << endl;
@@ -160,6 +206,7 @@ int main()
 	cout << book15.getTitle() << ", " << boolalpha << "is checked out: " << book15.getIsCheckedOut();
 
 
+	Drama.GetBooks();
 
 	/*cout << book.getTitle() << endl;
 	cout << book.getGenre() << endl;*/
@@ -176,7 +223,7 @@ int main()
 
 
 	// Library Program's text menu
-	cout << "Welcome to the Digital Library Service" << endl;
+	cout << "Welcome to the Digital Library Service" << endl << endl;
 
 	while (userInput != LAST_OPTION) {
 
@@ -209,8 +256,7 @@ int main()
 			   break;
 
 			case 3:
-				viewShelf();
-				// userFindBook();
+				userFindBook(DMACC);
 				break;
 
 			case 4:

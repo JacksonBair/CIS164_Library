@@ -33,3 +33,7 @@ string Library::displayShelves() {
         }
     return books;
 }
+
+vector<Shelf>& Library::getShelves() {
+    return this->shelves;
+}

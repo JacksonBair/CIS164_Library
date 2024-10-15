@@ -21,6 +21,8 @@ public:
     
     void addShelf(Shelf newShelf);
     string displayShelves();
+
+    vector<Shelf>& getShelves();
 };
 
 #endif // !Library_H

@@ -29,6 +29,8 @@ class Shelf {
 
         void AddBook(Book newBook);
         string DisplayBooks();
+
+        vector<Book>& GetBooks();
 };
 
 #endif // SHELF_H
