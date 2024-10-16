@@ -6,10 +6,9 @@
 #include "Book.h"
 #include "Library.h"
 
-
 using namespace std;
 
-// adds a book object
+// adds a book object to library object
 void userAddBook(Library library) {
 	string author;
 	string title;
@@ -19,72 +18,90 @@ void userAddBook(Library library) {
 	string isbn;
 
 	cout << "\nInput book title: ";
-	for (;;) {
+	for (;;)
+	{
 		cin >> title;
-		if (cin.good()) {
+		if (cin.good())
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cout << "Input must be valid. Please re-enter." << endl;
 		}
 	}
 	cout << "\nInput book author: ";
-	for (;;) {
+	for (;;)
+	{
 		cin >> author;
-		if (cin.good()) {
+		if (cin.good())
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cout << "Input must be valid. Please re-enter." << endl;
 		}
 	}
 	cout << "\nInput book publisher: ";
-	for (;;) {
+	for (;;)
+	{
 		cin >> publisher;
-		if (cin.good()) {
+		if (cin.good())
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cout << "Input must be valid. Please re-enter." << endl;
 		}
 	}
 	cout << "\nInput book publication date(mm/yyyy): ";
-	for (;;) {
+	for (;;)
+	{
 		cin >> publicationDate;
-		if (cin.good()) {
+		if (cin.good())
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cout << "Input must be valid. Please re-enter." << endl;
 		}
 	}
 	cout << "\nInput book isbn: ";
-	for (;;) {
+	for (;;)
+	{
 		cin >> isbn;
-		if (cin.good()) {
+		if (cin.good())
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cout << "Input must be valid. Please re-enter." << endl;
 		}
 	}
-	cout << "\nInput book genre: "; 
-	for (;;) {
+	cout << "\nInput book genre: ";
+	for (;;)
+	{
 		cin >> genre;
-		if (cin.good()) {
+		if (cin.good())
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cout << "Input must be valid. Please re-enter." << endl;
@@ -94,11 +111,10 @@ void userAddBook(Library library) {
 	/**
 	 * Add some way to input into library and shelf maybe?
 	 */
-
-
 }
 
-void viewShelf(Library& library) {
+void viewShelf(Library &library)
+{
 
 	cout << "What shelf are you looking for?\n1. Drama\n2. Action\n3. Adventure\n4. Romance\n5. NonFiction\n6. Fantasy";
 }
@@ -124,82 +140,18 @@ void userCheckoutBook(Library& library) {
 			break;
 		}
 
-		vector<Book>& currentShelf = shelves[i].GetBooks();
-
-		for (int j = 0; j < currentShelf.size(); j++) {
-
-			Book& currentBook = currentShelf[j];
-
-			if (inputISBN == currentBook.getIsbn()) {
-				foundBook = &currentBook;
-				bookFound = true;
-				break;
-			}
-		}
-	}
-
-	if (!bookFound) {
-		cout << endl << "Sorry! Book could not be found." << endl;
-	} else if (foundBook->getIsCheckedOut()) {
-		cout << endl << "Sorry! That book is already checked out." << endl;
-	} else if (!foundBook->getIsCheckedOut()) {
-		cout << endl << "Checking out the book: " << foundBook->getTitle() << endl;
-		foundBook->setIsCheckedOut(true);
-	}
-
-}
-
-
-// User inputs book ISBN to set books as returned
-// Not a big fan of just copypasting the same code around but I don't have time
-void userReturnBook(Library& library) {
-
+void userCheckoutBook(Library library) {
+void userCheckoutBook(Library library) {
 	bool bookFound = false;
 	string inputISBN;
 	vector<Shelf>& shelves = library.getShelves();
 
-
-	Book* foundBook;
-
-	cout << "What is the ISBN of the book being returned?" << endl
-		<< "Input ISBN: ";
-
-	cin >> inputISBN;
-
-	for (int i = 0; i < shelves.size(); i++) {
-		if (bookFound) {
-			break;
-		}
-
-		vector<Book>& currentShelf = shelves[i].GetBooks();
-
-		for (int j = 0; j < currentShelf.size(); j++) {
-
-			Book& currentBook = currentShelf[j];
-
-			if (inputISBN == currentBook.getIsbn()) {
-				foundBook = &currentBook;
-				bookFound = true;
-				break;
-			}
-		}
-	}
-
-	if (!bookFound) {
-		cout << endl << "Sorry! Book could not be found." << endl;
-	} else if (!foundBook->getIsCheckedOut()) {
-		cout << endl << "Sorry! That book is already here." << endl;
-	} else if (foundBook->getIsCheckedOut()) {
-		cout << endl << "Returning the book: " << foundBook->getTitle() << endl;
-		foundBook->setIsCheckedOut(false);
-	}
-
-}
+	//cout <<
+	//cout <<
 
 
-// Finds a book and the shelf it's on by using user input of ISBN
 void userFindBook(Library& library) {
-
+void userFindBook(Library& library) {
 	bool bookFound = false;
 	string inputISBN;
 	vector<Shelf> shelves = library.getShelves();
@@ -210,18 +162,22 @@ void userFindBook(Library& library) {
 
 	cin >> inputISBN;
 
-	for (int i = 0; i < shelves.size(); i++) {
-		if (bookFound) {
+	for (int i = 0; i < shelves.size(); i++)
+	{
+		if (bookFound)
+		{
 			break;
 		}
 
 		currentShelf = shelves[i].GetBooks();
-		
-		for (int j = 0; j < currentShelf.size(); j++) {
+
+		for (int j = 0; j < currentShelf.size(); j++)
+		{
 
 			currentBook = currentShelf[j];
-			
-			if (inputISBN == currentBook.getIsbn()) {
+
+			if (inputISBN == currentBook.getIsbn())
+			{
 				cout << "Found it! The book: " << currentBook.getTitle() << ", with ISBN: " << inputISBN << " is at shelf " << shelves[i].GetShelfName() << endl;
 				bookFound = true;
 				break;
@@ -230,17 +186,15 @@ void userFindBook(Library& library) {
 	}
 
 	if (!bookFound) {
-		cout << endl << "Book with ISBN: " << inputISBN << " could not be found" << endl;
-	}
-
+	if (!bookFound) {
+		cout << "Book with ISBN: " << inputISBN << " could not be found" << endl;
 }
 
 int main()
 {
 	cout << "Hello CMake." << endl;
-
+	// Initialization
 	Library DMACC("DMACC");
-
 	Shelf Drama("A1", "Drama");
 	DMACC.addShelf(Drama);
 	Shelf Action("A2", "Action");
@@ -253,7 +207,6 @@ int main()
 	DMACC.addShelf(NonFiction);
 	Shelf Fantasy("B3", "Fantasy");
 	DMACC.addShelf(Fantasy);
-
 	Book book1("Shadows in the Mist", "Amara Wilde", "Foggy Pines Publishing", "0001HD", "01/2023", "Drama");
 	DMACC.getShelves()[0].AddBook(book1);
 	Book book2("The Last Ember", "Cyrus Black", "Firelight Press", "0002PC", "03/2022", "Fantasy");
@@ -287,80 +240,78 @@ int main()
 	Book book16("Between Worlds", "Ivy Vale", "Parallel Universe Press", "0016IJ", "06/2023", "Adventure");
 	DMACC.getShelves()[2].AddBook(book16);
 
-
 	cout << DMACC.displayShelves() << endl;
 	cout << Fantasy.DisplayBooks() << endl;
 	cout << book15.getTitle() << ", " << boolalpha << "is checked out: " << book15.getIsCheckedOut();
-
 
 	Drama.GetBooks();
 
 	/*cout << book.getTitle() << endl;
 	cout << book.getGenre() << endl;*/
-	//cout << shelf1.GetShelfName() << endl;
-	//cout << shelf1.DisplayBooks();
-
+	// cout << shelf1.GetShelfName() << endl;
+	// cout << shelf1.DisplayBooks();
 
 	// Main Library Program
 	const int FIRST_OPTION = 1;
 	const int LAST_OPTION = 6;
 	int userInput = 0;
 
-	cout << endl << endl; 
-
+	cout << endl
+		 << endl;
 
 	// Library Program's text menu
-	cout << "Welcome to the Digital Library Service" << endl;
+	cout << "Welcome to the Digital Library Service" << endl << endl;
+	cout << "Welcome to the Digital Library Service" << endl << endl;
+	while (userInput != LAST_OPTION)
+	{
 
-	while (userInput != LAST_OPTION) {
-
-		cout << endl << "What would you like to do?" << endl
+		cout << "What would you like to do?" << endl
+		cout << "What would you like to do?" << endl
 			<< "1. Checkout a book" << endl
 			<< "2. Return a book" << endl
 			<< "3. Find a book" << endl
-			<< "4. Add a book (Not implemented)" << endl
-			<< "5. Remove a book (Not implemented)" << endl
+			<< "4. Add a book" << endl
+			<< "5. Remove a book" << endl
 			<< "6. Quit Program" << endl;
-
-
 		// Getting user's input
 		cout << "Selection: ";
 		cin >> userInput;
 
-		while (userInput < FIRST_OPTION || userInput > LAST_OPTION) {
+		while (userInput < FIRST_OPTION || userInput > LAST_OPTION)
+		{
 			cout << "Please select a valid option (1-6)" << endl;
 			cout << "Selection: ";
 			cin >> userInput;
 		}
 
 		switch (userInput) {
+		switch (userInput) {
 			case 1:
-				userCheckoutBook(DMACC);
+				// userCheckoutBook();
 				break;
-
 			case 2:
-				userReturnBook(DMACC);
+			case 2:
+				// userReturnBook();
 			   break;
-
-			case 3:
-				userFindBook(DMACC);
-				break;
+		case 3:
+			userFindBook(DMACC);
+			break;
 
 			case 4:
-				// userAddBook(DMACC);
+			case 4:
+				userAddBook(DMACC);
 				break;
+		case 5:
+			// userRemoveBook();
+			break;
 
-			case 5:
-				// userRemoveBook();
-				break;
-
-			case 6:
-				break;
-
+		case 6:
+			break;
 		}
 	}
 
-	cout << endl << "Goodbye!" << endl;
+	cout << endl
+		 << "Goodbye!" << endl;
 
 	return 0;
 }
