@@ -27,10 +27,11 @@ class Shelf {
         string GetShelfGenre() const;
         void SetShelfGenre(string shelfGenre);
 
+        vector<Book>& GetBooks();
+
         void AddBook(Book newBook);
         string DisplayBooks();
 
-        vector<Book>& GetBooks();
 };
 
 #endif // SHELF_H

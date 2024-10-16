@@ -19,6 +19,11 @@ void Library::setLibraryName(string libraryName)
     this->libraryName = libraryName;
 }
 
+vector<Shelf>& Library::getShelves()
+{
+    return this->shelves;
+}
+
 // Methods
 void Library::addShelf(Shelf newShelf)
 {
@@ -40,9 +45,4 @@ string Library::displayShelves()
         }
     }
     return books;
-}
-
-vector<Shelf> &Library::getShelves()
-{
-    return this->shelves;
 }

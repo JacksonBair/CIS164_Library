@@ -19,10 +19,11 @@ public:
     string getLibraryName() const;
     void setLibraryName(string libraryName);
 
+    vector<Shelf>& getShelves();
+
     void addShelf(Shelf newShelf);
     string displayShelves();
 
-    vector<Shelf> &getShelves();
 };
 
 #endif // !Library_H

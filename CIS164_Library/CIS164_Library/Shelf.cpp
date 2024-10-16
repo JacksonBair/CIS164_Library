@@ -31,6 +31,10 @@ void Shelf::SetShelfGenre(string shelfGenre) {
     this->shelfGenre = shelfGenre;
 }
 
+vector<Book>& Shelf::GetBooks() {
+    return this->shelfBooks;
+}
+
 
 // Methods
 void Shelf::AddBook(Book newBook) {
@@ -53,6 +57,3 @@ string Shelf::DisplayBooks() {
     return books;
 }
 
-vector<Book>& Shelf::GetBooks() {
-    return this->shelfBooks;
-}
